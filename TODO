@@ -1,0 +1,8 @@
+Do not reset the scroll after typing. (seeing history and typing something)
+Only scroll when it is the last line.
+
+misc
+----
+
+    $ grep -nE 'XXX|TODO' st.c
+

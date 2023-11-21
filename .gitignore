@@ -1,0 +1,8 @@
+.ccls-cache
+st
+st.o
+x.o
+boxdraw.o
+hb.o
+.patches/st-unpatched-columns
+.patches/st-unpatched-newfloat
