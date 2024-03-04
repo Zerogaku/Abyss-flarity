@@ -299,6 +299,14 @@ static MouseShortcut mshortcuts[] = {
  * Appereance
  **********************************************************************************/
 
+static char *openurlcmd[] = { "/bin/sh", "-c", "st-urlhandler", "externalpipe", NULL };
+
+static char *copyurlcmd[] = { "/bin/sh", "-c",
+  "tmp=$(sed 's/.*│//g' | tr -d '\n' | grep -aEo '(((http|https|gopher|gemini|ftp|ftps|git)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./@$&%?$#=_-~]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)' | uniq | sed 's/^www./http:\\/\\/www\\./g' ); IFS=; [ ! -z $tmp ] && echo $tmp | dmenu -i -p 'Copy which url?' -l 10 | tr -d '\n' | xclip -selection clipboard",
+  "externalpipe", NULL };
+
+static char *copyoutput[] = { "/bin/sh", "-c", "st-copyout", "externalpipe", NULL };
+
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
@@ -347,7 +355,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_D,        	zoom,      	{.f = -2} },
 
 	/*******************************************************************************
-	  i* Scroll
+	 * Scroll
 	 ********************************************************************************/
 
 	{ MODKEY,               XK_k,          kscrollup,      {.i = +1} },
@@ -355,6 +363,12 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_Page_Up,     kscrollup,      {.i = +10} },
 	{ MODKEY,               XK_Page_Down,   kscrolldown,    {.i = +10} },
 
+	/*******************************************************************************
+	 * Externalpipe
+	 ********************************************************************************/
+        { MODKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
+        { MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
+        { MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
 };
 
 /**********************************************************************************

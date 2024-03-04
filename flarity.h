@@ -117,6 +117,7 @@ void kscrolldown(const Arg *);
 void kscrollup(const Arg *);
 void newterm(const Arg *);
 void newtermfloat(const Arg *);
+void externalpipe(const Arg *);
 void printscreen(const Arg *);
 void printsel(const Arg *);
 void sendbreak(const Arg *);
@@ -178,3 +179,4 @@ extern const int boxdraw, boxdraw_bold, boxdraw_braille;
 
 // Open URL on browesr and highlight on hover.
 void openUrlOnClick(int, int, char *);
+
