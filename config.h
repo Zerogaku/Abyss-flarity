@@ -359,9 +359,9 @@ static Shortcut shortcuts[] = {
 	 ********************************************************************************/
 
 	{ MODKEY,               XK_k,          kscrollup,      {.i = +1} },
-	{ MODKEY,               XK_j,        kscrolldown,    {.i = +1} },
-	{ MODKEY,               XK_Page_Up,     kscrollup,      {.i = +10} },
-	{ MODKEY,               XK_Page_Down,   kscrolldown,    {.i = +10} },
+	{ MODKEY,               XK_j,          kscrolldown,    {.i = +1} },
+	{ MODKEY,               XK_Page_Up,    kscrollup,      {.i = +10} },
+	{ MODKEY,               XK_Page_Down,  kscrolldown,    {.i = +10} },
 
 	/*******************************************************************************
 	 * Externalpipe
