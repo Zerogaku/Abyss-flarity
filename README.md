@@ -14,7 +14,7 @@
 + `Shift+Backspace` opens a new terminal with the title "float" so that the window manager can make it float.
 + `Middle Button of Mouse` copies selected text.
 + `Shift + Middle Button of Mouse` pastes copied text.
-+ `CTRL+Backspace` returns `F36+F35` sequence, I use this on **nvim** and **zsh**. It's preferable compared to 
++ `CTRL+Backspace` returns `F36+F35` sequence, I use this on **nvim** and **zsh**. It's preferable compared to
 	- `noremap! <F36><F35> <C-w>` nvim
 	- `inoremap <F36><F35> <C-w>` nvim
 	- `bindkey '^[[24;5~^[[23;5~' backward-kill-word` zsh
@@ -38,6 +38,7 @@
 + [glyph-wide-support](https://github.com/LukeSmithxyz/st/commit/e3b821dcb3511d60341dec35ee05a4a0abfef7f2)
 + [cyclefonts](https://st.suckless.org/patches/cyclefonts/) [custom]
 + Set Italic, Bold, and Roman font by XResources [custom]
++ [external pipe](https://st.suckless.org/patches/externalpipe/)
 
 ---
 
